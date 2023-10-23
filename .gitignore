@@ -1,0 +1,30 @@
+# Arquivos binários
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Arquivos de log
+*.log
+
+# Diretório temporário
+/tmp
+/temp
+*.tmp
+
+# Binários Go e diretórios
+/bin/
+/pkg/
+
+# Arquivos de configuração específicos para o seu ambiente
+/.vscode
+/.idea
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Go
+.env
+go.mod
+go.sum
