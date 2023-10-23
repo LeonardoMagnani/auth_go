@@ -1,13 +1,13 @@
-# Sistema de Autenticação JWT em Go com MongoDB e Gin-Gonic
+# Sistema de Autenticação JWT em Go com MySQL e Gin-Gonic
 
 ##### Adaptado da versão: _https://github.com/akmamun/go-jwt_
 
-Este projeto foi criado para estudo da linguagem. É um sistema de autenticação simples em Go que utiliza MongoDB para armazenamento de dados, JWT para autenticação e autorização, e oferece rotas para realizar operações como criar usuário, acessar, buscar todos usuários e buscar usuário por ID.
+Este projeto foi criado para estudo da linguagem. É um sistema de autenticação simples em Go que utiliza MySQL para armazenamento de dados, JWT para autenticação e autorização, e oferece rotas para realizar operações como criar usuário, acessar, buscar todos usuários e buscar usuário por ID.
 
 ## Pré-requisitos
 
 - Go (versão 1.16 ou superior)
-- MongoDB (instância local ou acesso a uma instância remota)
+- MySQL (instância local ou acesso a uma instância remota)
 - Pacotes Go necessários (instalados automaticamente pelo go mod, veja instruções abaixo)
 
 ## Instalação
@@ -20,8 +20,14 @@ Este projeto foi criado para estudo da linguagem. É um sistema de autenticaçã
 #
 #### 3. Configure as variáveis de ambiente
 Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias. Um exemplo pode ser encontrado em .env.example.
->   MONGO_URI=mongodb://localhost:27017/db_name
-    JWT_SECRET=secret_jwt
+>   APPLICATION=App_Name
+    DB_USER=Db_User
+    DB_PASSWORD=Db_Passwd
+    DB_HOST=Db_Host
+    DB_PORT=Db_Port
+    DB_NAME=Db_Name
+    DB_PROTOCOL=Db_Protocol
+    JWT_SECRET=Your_Secret
 #
 ## Executando o Projeto
 > go run main.go
