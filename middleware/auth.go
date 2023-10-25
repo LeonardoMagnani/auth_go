@@ -10,7 +10,7 @@ func Authenticate() gin.HandlerFunc {
 
 		// Validar o authHeader
 
-		if authHeader == "Bearer token" {
+		if authHeader != "Bearer token" {
 			c.JSON(401, gin.H{"error": "Unauthorized"})
 			c.Abort()
 			return

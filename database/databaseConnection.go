@@ -16,15 +16,13 @@ func DBInstance() *sql.DB {
 	}
 
 	connectionString :=
-		os.Getenv("DB_USER") +
-			os.Getenv("DB_PASSWORD") + ":@" + "(127.0.0.1:3306)/authentication"
+		os.Getenv("DB_USER") + os.Getenv("DB_PASSWORD") + ":@" + "(127.0.0.1:3306)/goauth"
 
 	db, err := sql.Open("mysql", connectionString)
 
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer db.Close()
 
 	err = db.Ping()
 	if err != nil {

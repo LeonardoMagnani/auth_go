@@ -11,4 +11,5 @@ func UserRouter(incomingRouter *gin.Engine) {
 
 	incomingRouter.GET("/users", controllers.GetUsers)
 	incomingRouter.GET("/user/:user_id", controllers.GetUser)
+	incomingRouter.POST("/user/verify", controllers.VerifyUser)
 }

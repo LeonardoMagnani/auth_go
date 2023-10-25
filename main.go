@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-
 	port := os.Getenv("PORT")
 
 	if port == "" {
@@ -19,8 +18,11 @@ func main() {
 	router := gin.New()
 	router.Use(gin.Logger())
 
-	routes.UserRouter(router)
+	// No-middleware routes
 	routes.AuthRouter(router)
+
+	// Middleware routes
+	routes.UserRouter(router)
 
 	router.Run(":" + port)
 }
