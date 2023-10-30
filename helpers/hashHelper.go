@@ -9,7 +9,7 @@ import (
 )
 
 func GenerateHash() (string, int) {
-	value := rand.Intn(9999)
+	value := rand.Intn(9000) + 1000
 	secret := os.Getenv("SECRET_HASH")
 
 	combined := fmt.Sprintf("%d%s", value, secret)

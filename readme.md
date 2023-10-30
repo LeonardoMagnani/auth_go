@@ -20,14 +20,26 @@ Este projeto foi criado para estudo da linguagem. É um sistema de autenticaçã
 #
 #### 3. Configure as variáveis de ambiente
 Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias. Um exemplo pode ser encontrado em .env.example.
->   APPLICATION=App_Name
-    DB_USER=Db_User
-    DB_PASSWORD=Db_Passwd
-    DB_HOST=Db_Host
-    DB_PORT=Db_Port
-    DB_NAME=Db_Name
-    DB_PROTOCOL=Db_Protocol
-    JWT_SECRET=Your_Secret
+>   ##### General
+    APPLICATION=
+    SECRET_HASH=
+    PASSWORD_HASH=
+    SECRET_TOKEN=
+    SECRET_REFRESH_TOKEN=
+    TIME_LOCATION=America/Sao_Paulo
+
+    ##### Database
+    DB_USER=
+    DB_PASSWORD=
+    DB_HOST=
+    DB_PORT=
+    DB_NAME=
+    DB_PROTOCOL=
+
+    ##### Mail
+    MAIL_USER=
+    MAIL_PASSWORD=
+    MAIL_PROTOCOL=
 #
 ## Executando o Projeto
 > go run main.go

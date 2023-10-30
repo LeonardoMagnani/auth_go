@@ -87,7 +87,9 @@ func Signup(c *gin.Context) {
 	defer dbInstance.Close()
 
 	c.JSON(200, gin.H{
-		"message": "Cadastro efetuado.",
+		"user":  signupRequest.FirstName + " " + signupRequest.LastName,
+		"email": signupRequest.Email,
+		"phone": signupRequest.Phone,
 	})
 }
 
@@ -129,10 +131,18 @@ func Login(c *gin.Context) {
 		return
 	}
 
-	// Faça qualquer outra coisa que você precisa fazer após uma autenticação bem-sucedida
+	accessToken, err := helpers.GenerateAccessToken(result)
+	if err != nil {
+		c.JSON(500, gin.H{"error": err.Error()})
+	}
+
+	refreshToken, err := helpers.GenerateRefreshToken(result)
+	if err != nil {
+		c.JSON(500, gin.H{"error": err.Error()})
+	}
 
 	c.JSON(200, gin.H{
-		"message": "Login efetuado.",
-		"user":    result,
+		"access_token":  accessToken,
+		"refresh_token": refreshToken,
 	})
 }

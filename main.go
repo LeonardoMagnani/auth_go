@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+
 	routes "github.com/LeonardoMagnani/auth_go/routes"
 
 	"os"
@@ -9,6 +11,8 @@ import (
 )
 
 func main() {
+	log.SetPrefix("[Auth_Go] ")
+
 	port := os.Getenv("PORT")
 
 	if port == "" {
