@@ -20,6 +20,7 @@ Este projeto foi criado para estudo da linguagem. É um sistema de autenticaçã
 #
 #### 3. Configure as variáveis de ambiente
 Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias. Um exemplo pode ser encontrado em .env.example.
+
     APPLICATION=
     SECRET_HASH=
     PASSWORD_HASH=
