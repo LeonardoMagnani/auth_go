@@ -20,7 +20,7 @@ Este projeto foi criado para estudo da linguagem. É um sistema de autenticaçã
 #
 #### 3. Configure as variáveis de ambiente
 Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias. Um exemplo pode ser encontrado em .env.example.
->   # General
+>   - General
     APPLICATION=
     SECRET_HASH=
     PASSWORD_HASH=
@@ -28,7 +28,7 @@ Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente ne
     SECRET_REFRESH_TOKEN=
     TIME_LOCATION=America/Sao_Paulo
 
-    # Database
+    - Database
     DB_USER=
     DB_PASSWORD=
     DB_HOST=
@@ -36,7 +36,7 @@ Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente ne
     DB_NAME=
     DB_PROTOCOL=
 
-    # Mail
+    - Mail
     MAIL_USER=
     MAIL_PASSWORD=
     MAIL_PROTOCOL=
