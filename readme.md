@@ -2,7 +2,7 @@
 
 ##### Adaptado da versão: _https://github.com/akmamun/go-jwt_
 
-Este projeto foi criado para estudo da linguagem. É um sistema de autenticação simples em Go que utiliza MySQL para armazenamento de dados, JWT para autenticação e autorização, e oferece rotas para realizar operações como criar usuário, acessar, buscar todos usuários e buscar usuário por ID.
+Este projeto foi criado para estudo da linguagem Go. Sistema de autenticação em Go que utiliza MySQL para armazenamento de dados, JWT para autenticação e autorização, e oferece rotas para realizar operações como criar usuário, acessar, buscar todos usuários e buscar usuário por ID.
 
 ## Pré-requisitos
 
@@ -19,7 +19,7 @@ Este projeto foi criado para estudo da linguagem. É um sistema de autenticaçã
 > go mod tidy
 #
 #### 3. Configure as variáveis de ambiente
-Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias. Um exemplo pode ser encontrado em .env.example.
+Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias.
 
     APPLICATION=
     SECRET_HASH=
