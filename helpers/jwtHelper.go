@@ -33,6 +33,7 @@ func GenerateAccessToken(user models.AuthJwtModel) (string, error) {
 		"phone":      user.Phone,
 		"user_type":  user.User_type,
 		"verified":   user.Verified,
+		"exp":        expTime,
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
@@ -55,7 +56,7 @@ func GenerateRefreshToken(user models.AuthJwtModel) (string, error) {
 		return "", err
 	}
 
-	var secretKey = []byte(os.Getenv("SECRET_TOKEN"))
+	var secretKey = []byte(os.Getenv("SECRET_REFRESH_TOKEN"))
 	var expTime = time.Now().In(location).Add(time.Hour * 24 * 7).Unix()
 
 	claims := jwt.MapClaims{
